@@ -743,10 +743,11 @@ button {
     align-items: center;
     justify-content: center;
     outline: none;
+    transition: color var(--primary-transition-time) var(--primary-cubic-function);
 }
 
 .modal-close-btn:hover,
-modal-close-btn:focus {
+.modal-close-btn:focus {
     color: #2196F3;
 }
 
@@ -786,22 +787,27 @@ modal-close-btn:focus {
     background-color: transparent;
     padding-left: 42px;
     outline: transparent;
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-function);
 }
 
-.modal-input:focus {
-    border-color: #2196F3;
+.modal-input:focus,
+.modal-input:hover,
+.modal-text-area:hover,
+.modal-text-area:focus {
+    border-color: var(--hover-color);
 }
 
-.modal-input:focus + .input-icon {
-    fill: #2196F3;
+.modal-input:focus + .input-icon,
+.modal-input:hover + .input-icon {
+    fill: var(--hover-color);
 }
 
 .input-icon {
     position: absolute;
     left: 15px;
     top: 50%;
-    transform: translateY(-50%);
-    
+    transform: translateY(-50%);  
+    transition: fill var(--primary-transition-time) var(--primary-cubic-function);
 }
 
 .modal-input:not(:placeholder-shown):not(:focus):valid {
@@ -828,6 +834,8 @@ modal-close-btn:focus {
     resize: none;
     padding: 12px;
     outline: none;
+    transition: border-color var(--primary-transition-time) var(--primary-cubic-function);
+    margin-bottom: 20px;
 }
 
 .check-text {
@@ -838,6 +846,7 @@ modal-close-btn:focus {
     color: #757575;
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .check-text a {
@@ -885,6 +894,7 @@ modal-close-btn:focus {
     padding-left: 55px;
     padding-right: 55px;
     transition: background-color var(--primary-transition-time) var(--primary-cubic-function);
+    outline: none;
 }
 
 .modal-button:hover,
